@@ -2,7 +2,7 @@ set['apache']['listen_ports'] = %w(8080)
 set['apache']['contact'] = 'devops@evertrue.com'
 
 set['et_verify_app']['deploy_to'] = '/var/www/verify.evertrue.com'
-set['et_verify_app']['docroot'] = "#{node['et_verify_app']['deploy_to']}/current/release"
+set['et_verify_app']['docroot'] = "#{node['et_verify_app']['deploy_to']}/current"
 
 domain_prefix = ''
 domain_prefix = "#{node.chef_environment}-" if node.chef_environment != 'prod'
