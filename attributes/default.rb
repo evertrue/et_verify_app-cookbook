@@ -6,6 +6,7 @@ set['et_verify_app']['docroot'] = "#{node['et_verify_app']['deploy_to']}/current
 
 domain_prefix = ''
 domain_prefix = "#{node.chef_environment}-" if node.chef_environment != 'prod'
+domain_prefix = 'stage-' if node.chef_environment == 'stage-newvpc'
 
 set['et_verify_app']['server_name'] = "#{domain_prefix}verify.evertrue.com"
 
